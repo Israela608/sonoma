@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="1dp"
+    app:cardBackgroundColor="@color/light_blue"
+    app:cardPreventCornerOverlap="true"
+    android:id="@+id/cardLayout">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/albumArt"
+            android:layout_width="0dp"
+            android:layout_height="154dp"
+            android:background="@color/white"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Artist Name"
+            android:textColor="@android:color/background_dark"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toStartOf="@+id/optionMenu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/albumArt" />
+
+
+        <View
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/playButtonBackground"
+            app:layout_constraintEnd_toEndOf="@+id/playButtonBackground"
+            app:layout_constraintStart_toStartOf="@+id/playButtonBackground"
+            app:layout_constraintTop_toTopOf="@+id/playButtonBackground" />
+
+        <ImageView
+            android:id="@+id/playButtonBackground"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="@+id/albumArt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/albumArt"
+            app:srcCompat="@drawable/play_filled" />
+
+        <ImageView
+            android:id="@+id/optionMenu"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/playButtonBackground"
+            app:srcCompat="@drawable/option" />
+
+        <TextView
+            android:id="@+id/songSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:text="Song"
+            android:textSize="11sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/artistName" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.card.MaterialCardView>
